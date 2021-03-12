@@ -16,7 +16,7 @@ import * as Yup from "yup";
         name: Yup.string().required("El nombre es obligatorio"),
         email: Yup.string().email("No es un email valido").required("El email es obligatorio"),
         password: Yup.string().required("La contraseña es obligatoria").oneOf([Yup.ref("repeatPassword")], "Las contraseñas no son iguales"),
-        repearPassword: Yup.string().required("La contraseña es obligatoria").oneOf([Yup.ref("password")], "Las contraseñas no son iguales"),
+        repeatPassword: Yup.string().required("La contraseña es obligatoria").oneOf([Yup.ref("password")], "Las contraseñas no son iguales"),
      }),
      onSubmit:(formData) => {
        console.log(formData)
